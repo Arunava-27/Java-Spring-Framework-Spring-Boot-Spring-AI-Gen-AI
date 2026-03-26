@@ -1,10 +1,8 @@
 public class Hello {
     public static void main(String args[])
     {
-        int num1 = 3;
-        int num2 = 5;
-        int tot = num1 + num2;
+        float CGPA = 8.5f; // float datatype and value 
 
-        System.out.println(tot);
+        System.out.println(CGPA);
     }
 }
