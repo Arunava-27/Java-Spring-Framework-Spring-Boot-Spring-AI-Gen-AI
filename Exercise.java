@@ -1,27 +1,35 @@
 public class Exercise {
-   public static void main(String[] args) {
-       
-        int score = 75;
-        char grade;
-        
-        // TODO: Check pass or fail
-        if (score >= 50) {
-          System.out.println("Passed");
-        } else {
-          System.out.println("Failed");
-        }
+  public static void main(String[] args) {
 
-        // TODO: Determine grade based on score
-        if (score >= 90) {
-          grade = 'A';
-        } else if (score >= 75 && score <=89) {
-          grade = 'B';
-        } else if (score >= 60 && score <= 74) {
-          grade = 'C';
+    double num1 = 7;
+    double num2 = 3;
+    char operator = '+';
+    String again = "y";
+
+    while (again == "y") {
+      if (operator == '+') {
+        System.out.println("Result: "+(num1 + num2));
+        again = "n";
+      } else if (operator == '-') {
+        System.out.println("Result: "+(num1 - num2));
+        again = "n";
+      } else if (operator == '*') {
+        System.out.println("Result: "+(num1 * num2));
+        again = "n";
+      } else if (operator == '/') {
+        if (num2 == 0) {
+          System.out.println("Cannot divide by zero.");
+          again = "n";
         } else {
-          grade = 'D';
+          System.out.println("Result: "+(num1 / num2));
+          again = "n";
         }
-       
-        System.out.println("Grade: "+grade);
-   }
+      } else {
+        System.out.println("Invalid Operator");
+      }
+    }
+
+    System.out.println("Thank you for using the calculator.");
+
+  }
 }
